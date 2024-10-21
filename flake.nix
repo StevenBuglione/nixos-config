@@ -18,9 +18,9 @@
 
       # ----- USER SETTINGS ----- #
       userSettings = rec {
-        username = "emmet"; # username
-        name = "Emmet"; # name/identifier
-        email = "emmet@librephoenix.com"; # email (used for certain configurations)
+        username = "sbuglione"; # username
+        name = "Steven Buglione"; # name/identifier
+        email = "stevenbuglione1@gmail.com"; # email (used for certain configurations)
         dotfilesDir = "~/.dotfiles"; # absolute path of the local repo
         theme = "io"; # selcted theme from my themes directory (./themes/)
         wm = "x11"; # Selected window manager or desktop environment; must select one in both ./user/wm/ and ./system/wm/
