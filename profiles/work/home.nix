@@ -12,8 +12,6 @@
               (./. + "../../../user/wm"+("/"+userSettings.wm+"/"+userSettings.wm)+".nix") # My window manager selected from flake
               ../../user/shell/sh.nix # My zsh and bash config
               ../../user/shell/cli-collection.nix # Useful CLI apps
-              ../../user/app/doom-emacs/doom.nix # My doom emacs config
-              ../../user/app/nvim/nvim.nix # My doom emacs config
               #../../user/app/emacsng # Me experimenting with emacsng and a vanilla config
               ../../user/app/ranger/ranger.nix # My ranger file manager config
               ../../user/app/git/git.nix # My git config
@@ -37,31 +35,7 @@
     brave
     qutebrowser
     git
-    syncthing
     jetbrains-toolbox
-
-    # Office
-    nextcloud-client
-    libreoffice-fresh
-    mate.atril
-    openboard
-    xournalpp
-    gnome.adwaita-icon-theme
-    shared-mime-info
-    glib
-    newsflash
-    foliate
-    gnome.nautilus
-    gnome.gnome-calendar
-    gnome.seahorse
-    gnome.gnome-maps
-    openvpn
-    protonmail-bridge
-    texliveSmall
-    numbat
-    element-desktop-wayland
-
-    openai-whisper-cpp
 
     wine
     bottles
