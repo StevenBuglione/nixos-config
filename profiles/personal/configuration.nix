@@ -10,6 +10,7 @@
       ../../system/app/gamemode.nix
       ../../system/app/steam.nix
       ../../system/app/prismlauncher.nix
+      ../../system/app/1password.nix
       ../../system/security/doas.nix
       ../../system/security/gpg.nix
       ../../system/security/blocklist.nix

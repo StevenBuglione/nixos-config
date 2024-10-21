@@ -8,6 +8,7 @@
     [ ../../system/hardware-configuration.nix
       ../../system/hardware/systemd.nix # systemd config
       ../../system/hardware/kernel.nix # Kernel config
+      ../../system/hardware/nvidia.nix # Nvidia drivers
       ../../system/hardware/power.nix # Power management
       ../../system/hardware/time.nix # Network time sync
       ../../system/hardware/opengl.nix
@@ -46,7 +47,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # Kernel modules
-  boot.kernelModules = [ "i2c-dev" "i2c-piix4" "cpufreq_powersave" ];
+  boot.kernelModules = [ "i2c-dev" "i2c-piix4" "cpufreq_powersave" "nvidia_uvm" "nvidia_modeset" "nvidia_drm" "nvidia" ];
 
   # Bootloader
   # Use systemd-boot if uefi, default to grub otherwise

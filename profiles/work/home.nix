@@ -26,6 +26,7 @@
               ../../user/lang/godot/godot.nix # Game development
               #../../user/pkgs/blockbench.nix # Blockbench ## marked as insecure
               ../../user/hardware/bluetooth.nix # Bluetooth
+              ../../user/pkgs/jetbrain-lib.nix
             ];
 
   home.stateVersion = "22.11"; # Please read the comment before changing.
@@ -38,6 +39,7 @@
     qutebrowser
     git
     syncthing
+    jetbrains-toolbox
 
     # Office
     nextcloud-client
@@ -117,7 +119,6 @@
     vlc
     mpv
     yt-dlp
-    blender-hip
     libresprite
     # cura is moderately broken on wayland, so use xwayland
     (pkgs-stable.cura.overrideAttrs (oldAttrs: {
