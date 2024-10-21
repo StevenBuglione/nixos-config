@@ -14,12 +14,40 @@
 
   home.stateVersion = "22.11"; # Please read the comment before changing.
 
+  programs = {
+      git = {
+        enable = true;
+          extraConfig = {
+            gpg = {
+              format = "ssh";  # Set GPG format to SSH
+            };
+            "gpg \"ssh\"" = {
+              program = "${pkgs._1password-gui}/bin/op-ssh-sign";  # Corrected path for 1Password's SSH signing program
+            };
+            commit = {
+              gpgsign = true;  # Enable GPG signing for commits
+            };
+            user = {
+              signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIADXEW0ESKUfvgzAYIuHH/Rehcvhm8j4op7VlpLClfvC";
+            };
+          };
+
+      };
+
+      ssh = {
+        enable = true;  # Enable SSH support
+        extraConfig = ''
+          Host *
+            IdentityAgent ~/.1password/agent.sock  # Set the IdentityAgent to 1Password's agent
+        '';
+      };
+    };
+
   home.packages = with pkgs; [
     # Core
     zsh
     alacritty
     brave
-    git
     jetbrains-toolbox
   ];
 
