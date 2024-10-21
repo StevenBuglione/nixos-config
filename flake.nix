@@ -20,13 +20,13 @@
       userSettings = rec {
         username = "sbuglione"; # username
         name = "Steven Buglione"; # name/identifier
-        email = "stevenbuglione1@gmail.com"; # email (used for certain configurations)
-        dotfilesDir = "~/.dotfiles"; # absolute path of the local repo
+        email = ""; # email (used for certain configurations)
+        dotfilesDir = "/home/sbuglione/.dotfiles"; # absolute path of the local repo
         theme = "io"; # selcted theme from my themes directory (./themes/)
         wm = "x11"; # Selected window manager or desktop environment; must select one in both ./user/wm/ and ./system/wm/
         # window manager type (hyprland or x11) translator
         wmType = if ((wm == "hyprland") || (wm == "plasma")) then "wayland" else "x11";
-        browser = "qutebrowser"; # Default browser; must select one from ./user/app/browser/
+        browser = "brave"; # Default browser; must select one from ./user/app/browser/
         spawnBrowser = if ((browser == "qutebrowser") && (wm == "hyprland")) then "qutebrowser-hyprprofile" else (if (browser == "qutebrowser") then "qutebrowser --qt-flag enable-gpu-rasterization --qt-flag enable-native-gpu-memory-buffers --qt-flag num-raster-threads=4" else browser); # Browser spawn command must be specail for qb, since it doesn't gpu accelerate by default (why?)
         defaultRoamDir = "Personal.p"; # Default org roam directory relative to ~/Org
         term = "alacritty"; # Default terminal command;

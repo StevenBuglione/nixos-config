@@ -8,8 +8,6 @@
     [ ../work/configuration.nix # Personal is essentially work system + games
       ../../system/hardware-configuration.nix
       ../../system/app/gamemode.nix
-      ../../system/app/steam.nix
-      ../../system/app/prismlauncher.nix
       ../../system/app/1password.nix
       ../../system/app/jetbrains-lib.nix
       ../../system/security/doas.nix
