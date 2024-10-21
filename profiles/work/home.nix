@@ -34,6 +34,7 @@
     brave
     git
     jetbrains-toolbox
+    e2fsprogs
   ]);
 
   xdg.enable = true;
